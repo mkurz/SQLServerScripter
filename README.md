@@ -67,5 +67,5 @@ The NuGet packages you see in `/bin/nuget` were copied over from [Microsoft's SQ
 The generated script should be `UTF-8` encoded. However it seems some comments, etc. use Windows line breaks. You can convert the sql script to a unix file by running:
 
 ```bash
-dos2unix myscript.sql -o myscript.sql # replaces the original file
+dos2unix myscript.sql
 ```
