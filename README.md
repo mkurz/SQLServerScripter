@@ -23,16 +23,16 @@ sudo docker pull microsoft/dotnet:2.0.0-preview2-sdk
 
 ### Get the code
 
-Now clone this GitHub repository.
+Now clone this GitHub repository:
 ```bash
 git clone git@github.com:mkurz/SQLServerScripter.git
 ```
 
-Let's assume you cloned it to the folder `/path/to/SQLServerScripter/`.
+Let's assume you cloned it into the folder `/path/to/SQLServerScripter/`.
 
 ## Usage
 
-Let's say you want a script to be saved in the folder `/path/to/output/folder/` then you start a docker container like this:
+Let's say you want a script to be saved in the folder `/path/to/output/folder/`. Start a docker container like this:
 
 ```bash
 sudo docker run -it -v /path/to/SQLServerScripter/:/SQLServerScripter -v /path/to/output/folder/:/SQLScripts --rm microsoft/dotnet:2.0.0-preview2-sdk
@@ -60,7 +60,7 @@ dotnet run someAzureDomain.database.windows.net Westwind DaVinci /SQLScripts/
 If you have a look in the source code you will recognize that you can easily change the parameters for the generated script by changing the `ScriptingOptions` properties.
 
 Just FYI (but probably not relevant for you anyway):
-The NuGet packages you see in `/bin/nuget` were copied over from [Microsoft's SQL Tools Service](https://github.com/Microsoft/sqltoolsservice/tree/7ef81d0e5409dab6ba999b21f5214fc43bd0f08c/bin/nuget) - which is (also) used in [Visual Studio Code mssql plugin](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
+The NuGet packages you see in `/bin/nuget` were copied over from [Microsoft's SQL Tools Service](https://github.com/Microsoft/sqltoolsservice/tree/7ef81d0e5409dab6ba999b21f5214fc43bd0f08c/bin/nuget) - which is (also) used in the [Visual Studio Code mssql plugin](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
 
 ## Hint
 
