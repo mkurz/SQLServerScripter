@@ -9,7 +9,7 @@ For such tasks one usually had to use the SQL Server Management Studio (SSMS) fr
 
 ### Prerequisite
 
-`SQLServerScripter` needs to run on `.Net Core 2.0`. As at the time of writing this docs `.Net Core 2.0` is in preview (July 2017).
+`SQLServerScripter` needs to run on `.Net Core 2.0`.
 
 ### Install .Net Core and
 
@@ -18,7 +18,7 @@ First [install Microsoft .Net Core](https://www.microsoft.com/net/core).
 I recommend using the Docker image:
 
 ```bash
-sudo docker pull microsoft/dotnet:2.0.0-preview2-sdk
+sudo docker pull microsoft/dotnet:2.0.0-sdk
 ```
 
 ### Get the code
@@ -35,7 +35,7 @@ Let's assume you cloned it into the folder `/path/to/SQLServerScripter/`.
 Let's say you want a script to be saved in the folder `/path/to/output/folder/`. Start a docker container like this:
 
 ```bash
-sudo docker run -it -v /path/to/SQLServerScripter/:/SQLServerScripter -v /path/to/output/folder/:/SQLScripts --rm microsoft/dotnet:2.0.0-preview2-sdk
+sudo docker run -it -v /path/to/SQLServerScripter/:/SQLServerScripter -v /path/to/output/folder/:/SQLScripts --rm microsoft/dotnet:2.0.0-sdk
 ```
 
 Inside the container you can now run the `SQLServerScripter` inside the `/SQLServerScripter/` folder by calling:
